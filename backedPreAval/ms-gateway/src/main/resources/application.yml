@@ -1,0 +1,41 @@
+# Configuraciones del servidor
+server:
+  port: 8090
+# Configuraciones de eureka
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+# Configuraciones de spring cloud
+spring:
+  application:
+    name: ms-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay
+      routes:
+        - id: ms-post
+          uri: lb://ms-post
+          predicates:
+            - Path=/api/v1/**
+          filters:
+            - StripPrefix=2
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak-provider:
+            issuer-uri: http://localhost:8082/realms/PreAvaliacao
+        registration:
+          keycloak-registration:
+            provider: keycloak-provider
+            client-id: spring-gateway
+            client-secret: ENEnU9oDgt45fQq1n70XiDN4bQ3o9RRR
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"

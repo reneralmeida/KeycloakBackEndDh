@@ -1,0 +1,4 @@
+com\dh\humanresources\security\KeyCloakJwtAuthenticationConverter.class
+com\dh\humanresources\HumanResourcesApplication.class
+com\dh\humanresources\controllers\FuncionarioController.class
+com\dh\humanresources\security\OAuth2ResourceServerSecurityConfiguration.class

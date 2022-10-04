@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: servicio-eureka-server
+server:
+  port: 8761
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+info:
+  name: Eureka server.
+  author: Rener Almeida
+  severity: Alto

@@ -1,0 +1,11 @@
+msbills\security\JwtAuthConverterProperties.class
+msbills\MsBillsApplication.class
+msbills\runner\KeycloakAdminConfig.class
+msbills\runner\KeycloakInitializerRunner.class
+msbills\controller\BillController.class
+msbills\security\WebSecurityConfig.class
+msbills\security\JwtAuthConverter.class
+msbills\repositories\BillRepository.class
+msbills\models\Bill.class
+msbills\runner\KeycloakInitializerRunner$UserPass.class
+msbills\service\BillService.class

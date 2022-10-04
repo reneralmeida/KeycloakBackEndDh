@@ -1,0 +1,10 @@
+models\Bill.class
+repository\UserRepository.class
+com\msusers\MsUsersApplication.class
+controller\UserController.class
+dto\UserDTO.class
+models\User.class
+security\SecurityConfig.class
+service\UserService.class
+repository\BillsFeign.class
+security\JwtAuthConverter.class
